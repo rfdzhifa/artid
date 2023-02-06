@@ -1,20 +1,18 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import {Text, View } from 'react-native';
+import {NaavigationContainer} from '@react-navigation/native';
+import {createStackNavigatior} from '@react-navigation/stack';
+
+import Splash from './src/screen/splash';
+
+const Stack = createStackNavigatior();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>GATAU</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NaavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Splash"/>
+      </Stack.Navigator>
+    </NaavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
