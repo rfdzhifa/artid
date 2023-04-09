@@ -28,7 +28,7 @@ const TopArticleCard = ({ limit }) => {
         <View>
             {
                 limitedArticle.map((article, id) => (
-                    <TouchableOpacity key={id} onPress={() => navigation.navigate('DetailArticle', { article })}>
+                    <TouchableOpacity key={id} onPress={() => navigation.navigate('DetailArticle', { article, contentId: article.id })}>
                         <View style={styles.container}>
                             <Image source={{ uri: article.cover }} style={styles.cover} />
                             <View style={styles.cardContainer}>
@@ -40,8 +40,9 @@ const TopArticleCard = ({ limit }) => {
                             </View>
                         </View>
                     </TouchableOpacity>
-                ))}
-        </View>
+                ))
+            }
+        </View >
     );
 }
 
