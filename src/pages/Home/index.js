@@ -1,24 +1,25 @@
-import React from "react";
-import { Image, View, ScrollView, Text } from 'react-native';
+import React, { useState, useEffect } from "react";
+import { Image, View, ScrollView, Text, SafeAreaView } from 'react-native';
 import styles from "./Home.styles";
-import { TopArticleCard } from "../../components/molecules";
+import { RowArticle, TopArticleCard } from "../../components/molecules";
 import { Gap } from "../../components";
-import ListArticle from "../../components/molecules/FlatList";
 
 const Home = ({ navigation }) => {
+
     return (
-        <View style={styles.page}>
+        <SafeAreaView style={styles.page}>
             <ScrollView
                 showsHorizontalScrollIndicator={false}
                 style={styles.scrollPage}>
                 <TopArticleCard />
                 <Gap height={30} />
-                <Text style={styles.textDivider}>Recommendations</Text>
-                <Gap height={30} />
-                <ListArticle />
-                <Gap height={30} />
+                <View style={styles.container}>
+                    <Text style={styles.textDivider}>Recommendations</Text>
+                    <Gap height={30} />
+                    <RowArticle />
+                </View>
             </ScrollView>
-        </View>
+        </SafeAreaView>
     );
 }
 

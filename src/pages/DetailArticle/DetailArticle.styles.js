@@ -3,7 +3,8 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
     page: {
         width: '100%',
-        height: '100%'
+        height: '100%',
+        backgroundColor: '#FFFFFF'
     },
     cover: {
         width: '100%',
@@ -54,11 +55,11 @@ const styles = StyleSheet.create({
         padding: 15,
         bottom: 0,
         alignSelf: 'center',
-        marginVertical: 20,
-        elevation: 10,
-        shadowOpacity: 100,
-        shadowOffset: { width: 30, height: 30 },
-        shadowColor: '#4B4B4B'
+        marginVertical: 30,
+        shadowColor: '#B6B6B6',
+        elevation: 3,
+        shadowOpacity: 0.5,
+        shadowColor: '#'
     },
     buttonTitle: {
         color: '#223B67',

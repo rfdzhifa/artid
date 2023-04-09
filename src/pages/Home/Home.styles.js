@@ -13,12 +13,19 @@ const styles = StyleSheet.create({
     },
     scrollPage: {
         flexDirection: 'column',
-        paddingTop: 30
+        paddingTop: 30,
+        width: '100%'
+    },
+    container: {
+        alignItems: 'center',
+        width: '100%'
     },
     textDivider: {
+        alignSelf: 'flex-start',
         fontSize: 16,
         fontWeight: 600,
-        color: '#4B4B4B'
+        color: '#4B4B4B',
+        paddingLeft: 30,
     }
 });
 

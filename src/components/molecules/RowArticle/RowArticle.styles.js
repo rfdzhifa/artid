@@ -1,8 +1,14 @@
 import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
-    flatListContainer: {
-        paddingBottom: 50,
+    rowListContainer: {
+        display: 'flex',
+        flex: 1,
+        alignContent: 'center',
+        flexDirection: 'column',
+        flexWrap: 'wrap',
+        paddingBottom: 30,
+        alignSelf: 'center',
         width: '100%',
         height: '100%',
         backgroundColor: '#FFFFFF'
@@ -17,9 +23,7 @@ const styles = StyleSheet.create({
         shadowOpacity: 1,
         elevation: 18,
         shadowColor: '#B6B6B6',
-        backgroundColor: '#FFFFFF',
-        marginHorizontal: 20,
-        marginBottom: 20
+        backgroundColor: '#FFFFFF'
     },
     textContainer: {
         height: 100,

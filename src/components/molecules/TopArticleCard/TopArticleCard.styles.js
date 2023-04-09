@@ -7,6 +7,8 @@ const styles = StyleSheet.create({
     },
     cover: {
         width: 350,
+        height: 350,
+        borderRadius: 15,
     },
     cardContainer: {
         flex: 1,
@@ -20,7 +22,9 @@ const styles = StyleSheet.create({
         height: 120,
         borderRadius: 13,
         shadowRadius: 40,
-        shadowOpacity: 5,
+        shadowOpacity: 1,
+        elevation: 18,
+        shadowColor: '#B6B6B6',
         backgroundColor: '#FFFFFF',
         padding: 20,
     },
