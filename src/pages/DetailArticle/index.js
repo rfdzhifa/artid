@@ -9,14 +9,14 @@ import QuizModal from '../../components/molecules/QuizModal';
 
 const DetailArticle = ({ route, navigation }) => {
     // Extract the item data from the route params
-    const { article, levelId } = route.params;
+    const { article, contentId } = route.params;
     const [quizVisible, setQuizVisible] = useState(false);
 
     const openQuiz = () => {
         setQuizVisible(true);
     }
     const closeQuiz = () => {
-        setQuizVisible(False);
+        setQuizVisible(false);
     }
 
     const handleBackPress = () => {
@@ -48,14 +48,14 @@ const DetailArticle = ({ route, navigation }) => {
                 <Gap height={20} />
                 <Text style={styles.content}>{article.content}</Text>
                 <Gap height={60} />
-                {/* <TouchableOpacity onPress={openQuiz} style={styles.buttonContainer}>
+                <TouchableOpacity onPress={openQuiz} style={styles.buttonContainer}>
                     <Text style={styles.buttonTitle}>Start Quiz</Text>
-                </TouchableOpacity> */}
-                {/* <QuizModal
+                </TouchableOpacity>
+                <QuizModal
                     isVisible={quizVisible}
-                    onClose={closeQuiz}
-                    levelId={levelId}
-                /> */}
+                    closeQuiz={closeQuiz}
+                    contentId={contentId}
+                />
             </View>
         </ScrollView>
     );

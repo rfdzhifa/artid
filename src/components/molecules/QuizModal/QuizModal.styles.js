@@ -16,9 +16,27 @@ const styles = StyleSheet.create({
         alignSelf: 'center',
         justifyContent: 'center',
         borderRadius: 15,
-        padding: 20,
+        padding: 30,
         backgroundColor: '#FFFFFF'
+    },
+    quiz: {
+        fontSize: 16,
+        color: '#223B67',
+        fontWeight: 500,
+    },
+    button: {
+        borderRadius: 7,
+        padding: 13,
+        backgroundColor: '#223B67',
+        width: '100%',
+        alignItems: 'center'
+    },
+    textButton: {
+        fontSize: 16,
+        fontWeight: 600,
+        color: '#FFFFFF'
     }
+
 })
 
 export default styles;
