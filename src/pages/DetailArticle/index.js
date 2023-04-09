@@ -10,6 +10,7 @@ import QuizModal from '../../components/molecules/QuizModal';
 const DetailArticle = ({ route, navigation }) => {
     // Extract the item data from the route params
     const { article, contentId } = route.params;
+    console.log(contentId)
     const [quizVisible, setQuizVisible] = useState(false);
 
     const openQuiz = () => {

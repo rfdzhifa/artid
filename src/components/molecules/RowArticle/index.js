@@ -8,13 +8,12 @@ const RowArticle = () => {
     const navigation = useNavigation();
 
     const [article, setArticle] = useState();
-
     useEffect(() => {
         getArticle();
     }, []);
 
     const getArticle = () => {
-        axios.get(`http://192.168.67.104:5000/api/contents`)
+        axios.get(`http://192.168.228.70:5000/api/contents`)
             .then((res) => {
                 setArticle(res.data.data);
                 console.log(article)
@@ -26,7 +25,7 @@ const RowArticle = () => {
         <View style={styles.rowListContainer}>
             {
                 article?.map((article, i) => (
-                    <TouchableOpacity onPress={() => navigation.navigate('DetailArticle', { article })} style={styles.rowListContainer}>
+                    <TouchableOpacity key={i} onPress={() => navigation.navigate('DetailArticle', { article, contentId: article.id })} style={styles.rowListContainer}>
                         <View style={styles.container}>
                             <Image source={{ uri: article.cover }} style={styles.cover} />
                             <View style={styles.textContainer}>

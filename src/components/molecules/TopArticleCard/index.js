@@ -15,7 +15,7 @@ const TopArticleCard = ({ limit }) => {
     }, []);
 
     const getArticle = () => {
-        axios.get(`http://192.168.67.104:5000/api/contents`)
+        axios.get(`http://192.168.228.70:5000/api/contents`)
             .then((res) => {
                 setArticle(res.data.data);
                 console.log(article)

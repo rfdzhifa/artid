@@ -23,6 +23,7 @@ const styles = StyleSheet.create({
         fontSize: 16,
         color: '#223B67',
         fontWeight: 500,
+        textAlign: 'center'
     },
     button: {
         borderRadius: 7,
@@ -35,8 +36,16 @@ const styles = StyleSheet.create({
         fontSize: 16,
         fontWeight: 600,
         color: '#FFFFFF'
+    },
+    textResponse: {
+        fontSize: 20,
+        color: '#223B67',
+        fontWeight: 600
+    },
+    imageResponse: {
+        width: 200,
+        height: 200
     }
-
 })
 
 export default styles;
